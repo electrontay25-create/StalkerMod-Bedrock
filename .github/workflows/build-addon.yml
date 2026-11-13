@@ -1,0 +1,26 @@
+name: Build StalkerMod Bedrock Add-on
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Package .mcpack and .mcaddon
+        run: |
+          mkdir -p dist
+          cd BP && zip -r ../dist/StalkerMod_BP.mcpack . && cd ..
+          cd RP && zip -r ../dist/StalkerMod_RP.mcpack . && cd ..
+          cd dist && zip -r StalkerMod_v1.0.5_Bedrock.mcaddon StalkerMod_BP.mcpack StalkerMod_RP.mcpack
+
+      - name: Upload Add-on Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: StalkerMod-Bedrock-Addon
+          path: dist/StalkerMod_v1.0.5_Bedrock.mcaddon
