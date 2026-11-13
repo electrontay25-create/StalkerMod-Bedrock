@@ -1,0 +1,60 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "StalkerMod BP",
+    "description": "Port de StalkerMod (Java 1.20.1) a Bedrock Edition con Scripting API",
+    "uuid": "0c3a9bc0-2650-49cc-be64-1b86087d35f0",
+    "version": [
+      1,
+      0,
+      5
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "description": "Comportamientos y entidades",
+      "type": "data",
+      "uuid": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+      "version": [
+        1,
+        0,
+        5
+      ]
+    },
+    {
+      "description": "Lógica de acecho, puertas y UI",
+      "type": "script",
+      "language": "javascript",
+      "uuid": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e",
+      "entry": "scripts/main.js",
+      "version": [
+        1,
+        0,
+        5
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "d93f2be2-bd14-4725-b136-95dd7aac4760",
+      "version": [
+        1,
+        0,
+        5
+      ]
+    },
+    {
+      "module_name": "@minecraft/server",
+      "version": "1.14.0"
+    },
+    {
+      "module_name": "@minecraft/server-ui",
+      "version": "1.3.0"
+    }
+  ]
+}

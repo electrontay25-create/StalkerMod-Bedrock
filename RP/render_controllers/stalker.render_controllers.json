@@ -1,0 +1,25 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.stalker": {
+      "arrays": {
+        "textures": {
+          "Array.skins": [
+            "Texture.stalker_a",
+            "Texture.stalker_b",
+            "Texture.stalker_head"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Array.skins[query.property('stalkermod:sprite')]"
+      ]
+    }
+  }
+}

@@ -1,0 +1,3 @@
+entity.stalkermod:stalker.name=Stalker
+item.spawn_egg.entity.stalkermod:stalker.name=Huevo generador de Stalker
+item.stalkermod:stalker_watch.name=Reloj del Stalker

@@ -1,0 +1,92 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "stalkermod:stalker",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false,
+      "properties": {
+        "stalkermod:sprite": {
+          "type": "int",
+          "default": 0,
+          "range": [
+            0,
+            2
+          ],
+          "client_sync": true
+        },
+        "stalkermod:mode": {
+          "type": "int",
+          "default": 0,
+          "range": [
+            0,
+            2
+          ],
+          "client_sync": true
+        },
+        "stalkermod:reveal": {
+          "type": "float",
+          "default": 1.0,
+          "range": [
+            0.0,
+            1.0
+          ],
+          "client_sync": true
+        }
+      }
+    },
+    "component_groups": {
+      "stalkermod:despawn": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "stalker",
+          "monster",
+          "mob"
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 2.9
+      },
+      "minecraft:health": {
+        "value": 100,
+        "max": 100
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "all",
+            "deals_damage": false
+          }
+        ]
+      },
+      "minecraft:physics": {
+        "has_gravity": true,
+        "has_collision": false
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:nameable": {
+        "always_show": false,
+        "allow_name_tag_renaming": false
+      },
+      "minecraft:persistent": {}
+    },
+    "events": {
+      "stalkermod:despawn": {
+        "add": {
+          "component_groups": [
+            "stalkermod:despawn"
+          ]
+        }
+      }
+    }
+  }
+}

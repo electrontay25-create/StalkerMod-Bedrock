@@ -1,0 +1,23 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "stalkermod:stalker_watch"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "minecraft:clock"
+      },
+      {
+        "item": "minecraft:ender_eye"
+      }
+    ],
+    "result": {
+      "item": "stalkermod:stalker_watch",
+      "count": 1
+    }
+  }
+}
